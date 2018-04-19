@@ -100,11 +100,12 @@
                 </div>
                 <div class="widget widget-archives">
                     <h3 class="widget-title">归档</h3>
-                    {% archives as archives %}
+                    {% archives as date_list %}
                     <ul>
-                        {% for archive in date_list %}
+                        {% for date in date_list %}
                             <li>
-                                <a href="#">{{ date.year }} 年 {{ date.month }} 月</a>
+                                <!-- 这里使用 url 是固定写法，表明是解析视图函数blog下的archives函数  -->
+                                <a href="{% url 'blog:archives' date.year date.month %}">{{ date.year }} 年 {{ date.month }} 月</a>
                             </li>
                         {% empty %}
                             暂无归档！
@@ -118,7 +119,7 @@
                     <ul>
                         {% for category in category_list %}
                             <li>
-                                <a href="#">{{ category.name }} <span class="post-count">(13)</span></a>
+                                <a href="{% url 'blog:category' category.pk %}">{{ category.name }} <span class="post-count">(13)</span></a>
                             </li>
                         {% empty %}
                             暂无分类！
