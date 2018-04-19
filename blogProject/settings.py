@@ -1,3 +1,4 @@
+# coding=utf-8
 """
 Django settings for blogProject project.
 
@@ -38,7 +39,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    # 博客app
     'blog',
+    # 点评app
+    'comments',
 ]
 
 MIDDLEWARE = [
