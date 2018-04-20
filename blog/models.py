@@ -11,6 +11,9 @@ from django.utils.encoding import python_2_unicode_compatible
 
 @python_2_unicode_compatible
 class Category(models.Model):
+    def __init__(self):
+        pass
+
     name = models.CharField(max_length=100)
 
     def __str__(self):
@@ -18,6 +21,8 @@ class Category(models.Model):
 
 @python_2_unicode_compatible
 class Tag(models.Model):
+    def __init__(self):
+        pass
     name = models.CharField(max_length=100)
 
     def __str__(self):
@@ -25,6 +30,9 @@ class Tag(models.Model):
 
 @python_2_unicode_compatible
 class Post(models.Model):
+    def __init__(self):
+        pass
+
     title = models.CharField(max_length=70)
     body = models.TextField()
 
