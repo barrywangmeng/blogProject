@@ -1,0 +1,14 @@
+automium==0.2.6
+automium-web==0.1.1
+click==6.7
+Django==1.11.12
+Flask==0.12.2
+itsdangerous==0.24
+Jinja2==2.10
+legacy==0.1.6
+Markdown==2.6.11
+MarkupSafe==1.0
+Pygments==2.2.0
+pytz==2018.4
+views==0.3
+Werkzeug==0.14.1

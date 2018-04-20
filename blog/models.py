@@ -50,3 +50,7 @@ class Post(models.Model):
     def get_absolute_url(self):
         # reverse 函数
         return reverse('blog:detail', kwargs={'pk': self.pk})
+
+    # 默认按照时间倒叙排列
+    class Meta:
+        ordering = ['-create_time']
