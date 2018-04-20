@@ -48,7 +48,7 @@ class Post(models.Model):
     tags = models.ManyToManyField(Tag, blank=True)
     # 这里的User是从django.contrib.auth.modles导入的
     # django.contrib.auth是Django内置的引用，专门用于处理网站用户的注册、登录等流程
-    author = models.ForeignKey(User)
+    author = models.ForeignKey(User, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.title
