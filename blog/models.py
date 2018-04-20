@@ -44,7 +44,7 @@ class Post(models.Model):
 
     # 我们规定一篇文章只能对应一个分类，但是一个分类下可以有很多文章，所以使用ForeignKey即代表一对多的关系
     # 文章和标签是多对多的关系，所以使用ManyToManyField
-    category = models.ForeignKey(Category)
+    category = models.ForeignKey(Category, on_delete=models.CASCADE)
     tags = models.ManyToManyField(Tag, blank=True)
     # 这里的User是从django.contrib.auth.modles导入的
     # django.contrib.auth是Django内置的引用，专门用于处理网站用户的注册、登录等流程
